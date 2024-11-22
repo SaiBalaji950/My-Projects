@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)),url('/static/07.gif');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+            margin: 0; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: flex-end; 
+            padding: 20px;
+        }
+        h1 {
+            text-align: right;
+            color: whitesmoke; 
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 450px; 
+            border-collapse: collapse; 
+            background-color: white; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 10px; 
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 90%; 
+            padding: 8px; 
+            margin: 5px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        }
+        input[type="submit"] {
+            background-color: blue; 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            width: 100%; 
+        }
+        input[type="submit"]:hover {
+            background-color: darkblue; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Rice Production Prediction</h1>
+    <form action="/predict" method="POST">
+        <table>
+            <tr>
+                <td><label>Year </label></td>
+                <td><input type="text" name="Year" required></td>
+            </tr>
+            <tr>
+                <td><label>Harvested Area </label></td>
+                <td><input type="text" name="Harvested Area" required></td>
+            </tr>
+            <tr>
+                <td><label>Production </label></td>
+                <td><input type="text" name="Production" required></td>
+            </tr>
+            <tr>
+                <td><label>Rainfall </label></td>
+                <td><input type="text" name="Rainfall" required></td>
+            </tr>
+            <tr>
+                <td><label>Humidity </label></td>
+                <td><input type="text" name="Humidity" required></td>
+            </tr>
+            <tr>
+                <td><label>Temperature </label></td>
+                <td><input type="text" name="Temperature" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Predict"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/Breast-cancer.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+            margin: 0; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center;
+            align-items: flex-end; 
+            height: 100%;  
+            padding-right: 80px; 
+        }
+        h1 {
+            text-align: right;
+            color: darkblue; 
+            font-size: 50px;
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: 80px;
+        }
+        table {
+            width: 450px; 
+            border-collapse: collapse; 
+            background-color: white; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin: auto;
+            margin-right:50px;
+            align-self: flex-end; /* Align table to the right */
+        }
+        td {
+            padding: 10px; 
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 90%; 
+            padding: 8px; 
+            margin: 5px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        }
+        input[type="submit"] {
+            background-color: blue; 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            width: 100%; 
+        }
+        input[type="submit"]:hover {
+            background-color: darkblue; 
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Breast Carcinoma Prediction</h1>
+    <form action="/predict" method="POST">
+        <table>
+            <tr>
+                <td><label>Radius_mean:</label></td>
+                <td><input type="text" name="radius_mean" required></td>
+            </tr>
+            <tr>
+                <td><label>Texture_mean:</label></td>
+                <td><input type="text" name="texture_mean" required></td>
+            </tr>
+            <tr>
+                <td><label>Perimeter_mean:</label></td>
+                <td><input type="text" name="perimeter_mean" required></td>
+            </tr>
+            <tr>
+                <td><label>Area_mean:</label></td>
+                <td><input type="text" name="area_mean" required></td>
+            </tr>
+            <tr>
+                <td><label>Smoothness_mean:</label></td>
+                <td><input type="text" name="smoothness_mean" required></td>
+            </tr>
+            <tr>
+                <td><label>Compactness_mean:</label></td>
+                <td><input type="text" name="compactness_mean" required></td>
+            </tr>
+            <tr>
+                <td><label>Concavity_mean:</label></td>
+                <td><input type="text" name="concavity_mean" required></td>
+            </tr>
+            <tr>
+                <td><label>Concave Points_mean:</label></td>
+                <td><input type="text" name="concave points_mean" required></td>
+            </tr>
+            <tr>
+                <td><label>Symmetry_mean:</label></td>
+                <td><input type="text" name="symmetry_mean" required></td>
+            </tr>
+            <tr>
+                <td><label>Fractal Dimension_mean:</label></td>
+                <td><input type="text" name="fractal_dimension_mean" required></td>
+            </tr>
+            <tr>
+                <td><label>Radius_se:</label></td>
+                <td><input type="text" name="radius_se" required></td>
+            </tr>
+            <tr>
+                <td><label>Texture_se:</label></td>
+                <td><input type="text" name="texture_se" required></td>
+            </tr>
+            <tr>
+                <td><label>Perimeter_se:</label></td>
+                <td><input type="text" name="perimeter_se" required></td>
+            </tr>
+            <tr>
+                <td><label>Area_se:</label></td>
+                <td><input type="text" name="area_se" required></td>
+            </tr>
+            <tr>
+                <td><label>Smoothness_se:</label></td>
+                <td><input type="text" name="smoothness_se" required></td>
+            </tr>
+            <tr>
+                <td><label>Compactness_se:</label></td>
+                <td><input type="text" name="compactness_se" required></td>
+            </tr>
+            <tr>
+                <td><label>Concavity_se:</label></td>
+                <td><input type="text" name="concavity_se" required></td>
+            </tr>
+            <tr>
+                <td><label>Concave Points_se:</label></td>
+                <td><input type="text" name="concave points_se" required></td>
+            </tr>
+            <tr>
+                <td><label>Symmetry_se:</label></td>
+                <td><input type="text" name="symmetry_se" required></td>
+            </tr>
+            <tr>
+                <td><label>Fractal Dimension_se:</label></td>
+                <td><input type="text" name="fractal_dimension_se" required></td>
+            </tr>
+            <tr>
+                <td><label>Radius_worst:</label></td>
+                <td><input type="text" name="radius_worst" required></td>
+            </tr>
+            <tr>
+                <td><label>Texture_worst:</label></td>
+                <td><input type="text" name="texture_worst" required></td>
+            </tr>
+            <tr>
+                <td><label>Perimeter_worst:</label></td>
+                <td><input type="text" name="perimeter_worst" required></td>
+            </tr>
+            <tr>
+                <td><label>Area_worst:</label></td>
+                <td><input type="text" name="area_worst" required></td>
+            </tr>
+            <tr>
+                <td><label>Smoothness_worst:</label></td>
+                <td><input type="text" name="smoothness_worst" required></td>
+            </tr>
+            <tr>
+                <td><label>Compactness_worst:</label></td>
+                <td><input type="text" name="compactness_worst" required></td>
+            </tr>
+            <tr>
+                <td><label>Concavity_worst:</label></td>
+                <td><input type="text" name="concavity_worst" required></td>
+            </tr>
+            <tr>
+                <td><label>Concave Points_worst:</label></td>
+                <td><input type="text" name="concave points_worst" required></td>
+            </tr>
+            <tr>
+                <td><label>Symmetry_worst:</label></td>
+                <td><input type="text" name="symmetry_worst" required></td>
+            </tr>
+            <tr>
+                <td><label>Fractal Dimension_worst:</label></td>
+                <td><input type="text" name="fractal_dimension_worst" required></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Predict"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

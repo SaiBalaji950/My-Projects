@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 120vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            flex-direction: column;
+            text-align: right;
+            color: darkred;
+            font-size: 30px;
+            margin: 0;
+        }
+
+        body[id="Aceh"] { background-image: url('/static/05.jpg');background-size: auto; }
+        body[id="Bali"] { background-image: url('/static/06.webp');background-size: auto;  }
+        body[id="Banten"] { background-image: url('/static/08.jpg');background-size: auto; }
+        body[id="Bengkulu"] { background-image: url('/static/07.avif');background-size: auto; }
+        body[id="DI Yogyakarta"] { background-image: url('/static/09.jpg');background-size: auto; }
+        body[id="DKI Jakarta"] { background-image: url('/static/11.avif');background-size: auto; }
+        body[id="Gorontalo"] { background-image: url('/static/11.jpg');background-size: auto; }
+        body[id="Jambi"] { background-image: url('/static/09.webp');background-size: auto; }
+        body[id="Jawa Barat"] { background-image: url('/static/12.jpg');background-size: auto; }
+        body[id="Jawa Tengah"] { background-image: url('/static/13.jpg');background-size: auto; }
+        body[id="Jawa Timur"] { background-image: url('/static/14.webp'); }
+        body[id="Kalimantan Barat"] { background-image: url('/static/15.jpg');background-size: auto; }
+        body[id="Kalimantan Selatan"] { background-image: url('/static/15.jpg');background-size: auto; }
+        body[id="Kalimantan Tengah"] { background-image: url('/static/15.jpg');background-size: auto; }
+        body[id="Kalimantan Utara"] { background-image: url('/static/15.jpg');background-size: auto; }
+        body[id="Kepulauan Bangka Belitung"] { background-image: url('/static/17.png'); }
+        body[id="Kepulauan Riau"] { background-image: url('/static/15.webp'); }
+        body[id="Lampung"] { background-image: url('/static/15.avif'); background-size: auto;}
+        body[id="Maluku"] { background-image: url('/static/16.webp'); }
+        body[id="Maluku Utara"] { background-image: url('/static/16.webp'); }
+        body[id="Nusa Tenggara Barat"] { background-image: url('/static/17.webp'); }
+        body[id="Nusa Tenggara Timur"] { background-image: url('/static/18.png'); }
+        body[id="Papua"] { background-image: url('/static/20.avif'); }
+        body[id="Papua Barat"] { background-image: url('/static/20.avif'); }
+        body[id="Riau"] { background-image: url('/static/20.png'); }
+        body[id="Sulawesi Tenggara"] { background-image: url('/static/21.png');background-size: auto; } 
+        body[id="Sumatera Selatan"] { background-image: url('/static/21.png');background-size: auto; }
+        body[id="Sulawesi Barat"] { background-image: url('/static/21.png');background-size: auto; }
+        body[id="Sulawesi Tengah"] { background-image: url('/static/21.png');background-size: auto; }
+        body[id="Sulawesi Utara"] { background-image: url('/static/21.png');background-size: auto; }
+        body[id="Sulawesi Selatan"] { background-image: url('/static/21.png');background-size: auto; }
+        body[id="Sumatera Barat"] { background-image: url('/static/21.jpg');background-size: auto; }
+        body[id="Sumatera Utara"] { background-image: url('/static/21.jpg');background-size: auto; }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        button {
+            font-size: 20px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body id="{{ Province }}">
+    <h1>Result: {{ Province }}</h1>
+    <a href="/index"><button>Predict Another Province</button></a>
+    <a href="/performance"><button>Performance Analysis</button></a>
+</body>
+</html>

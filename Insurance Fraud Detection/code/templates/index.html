@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/62fcbc8a322bf970eda4d1cb_auto\ insurance\ fraud\ detection\ \ How\ to\ prevent\ it-min.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+            margin: 0; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            padding: 20px;
+        }
+        h1 {
+            text-align: left;
+            color: white; 
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 450px; 
+            border-collapse: collapse; 
+            background-color: white; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 10px; 
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 90%; 
+            padding: 8px; 
+            margin: 5px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        }
+        input[type="submit"] {
+            background-color: blue; 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            width: 100%; 
+        }
+        input[type="submit"]:hover {
+            background-color: darkblue; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Vehicle Insurance Fraud Detection</h1>
+        <form action="/predict" method="POST">
+            <table>
+                <tr>
+                    <td><label>WeekOfMonth: </label></td>
+                    <td><input type="text" name="WeekOfMonth" required></td>
+                </tr>
+                <tr>
+                    <td><label>Make: </label></td>
+                    <td><input type="text" name="Make" required></td>
+                </tr>
+                <tr>
+                    <td><label>AccidentArea: </label></td>
+                    <td><input type="text" name="AccidentArea" required></td>
+                </tr>
+                <tr>
+                    <td><label>DayOfWeekClaimed: </label></td>
+                    <td><input type="text" name="DayOfWeekClaimed" required></td>
+                </tr>
+                <tr>
+                    <td><label>WeekOfMonthClaimed: </label></td>
+                    <td><input type="text" name="WeekOfMonthClaimed" required></td>
+                </tr>
+                <tr>
+                    <td><label>Sex: </label></td>
+                    <td><input type="text" name="Sex" required></td>
+                </tr>
+                <tr>
+                    <td><label>MaritalStatus: </label></td>
+                    <td><input type="text" name="MaritalStatus" required></td>
+                </tr>
+                <tr>
+                    <td><label>Age: </label></td>
+                    <td><input type="text" name="Age" required></td>
+                </tr>
+                <tr>
+                    <td><label>Fault: </label></td>
+                    <td><input type="text" name="Fault" required></td>
+                </tr>
+                <tr>
+                    <td><label>PolicyType: </label></td>
+                    <td><input type="text" name="PolicyType" required></td>
+                </tr>
+                <tr>
+                    <td><label>VehicleCategory: </label></td>
+                    <td><input type="text" name="VehicleCategory" required></td>
+                </tr>
+                <tr>
+                    <td><label>VehiclePrice: </label></td>
+                    <td><input type="text" name="VehiclePrice" required></td>
+                </tr>
+                <tr>
+                    <td><label>PolicyNumber: </label></td>
+                    <td><input type="text" name="PolicyNumber" required></td>
+                </tr>
+                <tr>
+                    <td><label>Deductible: </label></td>
+                    <td><input type="text" name="Deductible" required></td>
+                </tr>
+                <tr>
+                    <td><label>Days_Policy_Accident: </label></td>
+                    <td><input type="text" name="Days_Policy_Accident" required></td>
+                </tr>
+                <tr>
+                    <td><label>Days_Policy_Claim: </label></td>
+                    <td><input type="text" name="Days_Policy_Claim" required></td>
+                </tr>
+                <tr>
+                    <td><label>PastNumberOfClaims: </label></td>
+                    <td><input type="text" name="PastNumberOfClaims" required></td>
+                </tr>
+                <tr>
+                    <td><label>AgeOfVehicle: </label></td>
+                    <td><input type="text" name="AgeOfVehicle" required></td>
+                </tr>
+                <tr>
+                    <td><label>AgeOfPolicyHolder: </label></td>
+                    <td><input type="text" name="AgeOfPolicyHolder" required></td>
+                </tr>
+                <tr>
+                    <td><label>PoliceReportFiled: </label></td>
+                    <td><input type="text" name="PoliceReportFiled" required></td>
+                </tr>
+                <tr>
+                    <td><label>WitnessPresent: </label></td>
+                    <td><input type="text" name="WitnessPresent" required></td>
+                </tr>
+                <tr>
+                    <td><label>AgentType: </label></td>
+                    <td><input type="text" name="AgentType" required></td>
+                </tr>
+                <tr>
+                    <td><label>NumberOfSuppliments: </label></td>
+                    <td><input type="text" name="NumberOfSuppliments" required></td>
+                </tr>
+                <tr>
+                    <td><label>AddressChange_Claim: </label></td>
+                    <td><input type="text" name="AddressChange_Claim" required></td>
+                </tr>
+                <tr>
+                    <td><label>NumberOfCars: </label></td>
+                    <td><input type="text" name="NumberOfCars" required></td>
+                </tr>
+                <tr>
+                    <td><label>BasePolicy: </label></td>
+                    <td><input type="text" name="BasePolicy" required></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Predict"></td>
+                </tr>
+            </table>
+    </form>
+</body>
+</html>

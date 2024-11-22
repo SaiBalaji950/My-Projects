@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/01.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+            margin: 0; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            padding: 20px;
+        }
+        h1 {
+            text-align: left;
+            color: whitesmoke; 
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 450px; 
+            border-collapse: collapse; 
+            background-color: white; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 10px; 
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 90%; 
+            padding: 8px; 
+            margin: 5px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        }
+        input[type="submit"] {
+            background-color: blue; 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            width: 100%; 
+        }
+        input[type="submit"]:hover {
+            background-color: darkblue; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Novel Machine Learning Techniques for Classification of Rolling Bearings</h1>
+    <form action="/predict" method="POST">
+        <table>
+            <tr>
+                <td><label>max </label></td>
+                <td><input type="text" name="max" required></td>
+            </tr>
+            <tr>
+                <td><label>min </label></td>
+                <td><input type="text" name="min" required></td>
+            </tr>
+            <tr>
+                <td><label>mean </label></td>
+                <td><input type="text" name="mean" required></td>
+            </tr>
+            <tr>
+                <td><label>sd </label></td>
+                <td><input type="text" name="sd" required></td>
+            </tr>
+            <tr>
+                <td><label>rms </label></td>
+                <td><input type="text" name="rms" required></td>
+            </tr>
+            <tr>
+                <td><label>skewness </label></td>
+                <td><input type="text" name="skewness" required></td>
+            </tr>
+            <tr>
+                <td><label>kurtosis </label></td>
+                <td><input type="text" name="kurtosis" required></td>
+            </tr>
+            <tr>
+                <td><label>crest </label></td>
+                <td><input type="text" name="crest" required></td>
+            </tr>
+            <tr>
+                <td><label>form </label></td>
+                <td><input type="text" name="form" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Predict"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

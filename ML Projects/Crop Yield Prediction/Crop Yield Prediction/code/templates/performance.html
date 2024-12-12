@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction Performance</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+        .chart-container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Crop Distribution Breakdown</h1>
+    <div class="chart-container">
+        <canvas id="cropPieChart"></canvas>
+    </div>
+
+    <script>
+        // Fetch data passed from Flask
+        const labels = {{ labels | safe }};
+        const values = {{ values | safe }};
+
+        // Create Pie Chart
+        var ctx = document.getElementById('cropPieChart').getContext('2d');
+        var cropPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: values,
+                    backgroundColor: [
+                        '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
+                        '#FF9F40', '#66FF66', '#3399FF', '#FF6666', '#FFCC00',
+                        '#66FFCC', '#FF9966', '#CC66FF', '#66CCFF', '#CCFF66',
+                        '#99CC00', '#FF6633', '#0099CC', '#FF33FF', '#33CC33',
+                        '#CC9933', '#FFCC99'
+                    ],
+                    borderColor: '#fff',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction Result</title>
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: lavenderblush;
+            font-size: 30px;
+            margin: 0;
+        }
+        .Rice { background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url('/static/03.jpeg'); }
+        .Maize { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/0.jpg'); }
+        .ChickPea { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/5.jpg'); }
+        .KidneyBeans { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/6.webp'); }
+        .PigeonPeas { background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url('/static/7.jpg'); }
+        .MothBeans { background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)),url('/static/8.jpg'); }
+        .MungBean { background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)),url('/static/9.jpg'); }
+        .Blackgram { background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0)),url('/static/12.webp'); }
+        .Lentil { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/13.jpg'); }
+        .Pomegranate { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/14.jpg'); }
+        .Banana { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/15.jpg'); }
+        .Mango { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/16.jpg'); }
+        .Grapes { background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url('/static/17.jpg'); }
+        .Watermelon { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/18.jpg'); }
+        .Muskmelon { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/19.jpg'); }
+        .Apple { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/20.jpg'); }
+        .Orange { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/21.jpg'); }
+        .Papaya { background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)),url('/static/22.jpeg'); }
+        .Coconut { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/23.webp'); }
+        .Cotton { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/24.jpg'); }
+        .Jute { background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)),url('/static/25.jpg'); }
+        .Coffee { background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('/static/26.jpg'); }
+      
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; 
+        }
+
+        button {
+            font-size: 20px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body class="{{ crop | default('default') }}">
+    <h1>The Crop is: {{ crop }}</h1>
+    <a href="/index"><button>Predict Another Crop</button></a>
+    <a href="/performance"><button>Performance Analysis</button></a>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Carcinoma Prediction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('/static/Breast-cancer.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat; 
+            height: 75vh; 
+            margin: 0; 
+        }
+        h1 {
+            margin-left: 100px; 
+            color: red; 
+            font-size: 50px;
+        }
+        .content {
+            display: flex;
+            justify-content: flex-end; 
+            gap: 10px;
+            margin-right: 30px; 
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body> 
+    <h1>Breast Carcinoma Prediction</h1>
+    <div class="content">
+        <a href="/user_registration"><button>User Registration</button></a>
+        <a href="/user_login"><button>User Login</button></a>
+    </div>
+</body>
+</html>

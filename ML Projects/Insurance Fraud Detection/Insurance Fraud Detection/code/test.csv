@@ -1,0 +1,12 @@
+WeekOfMonth,Make,AccidentArea,DayOfWeekClaimed,WeekOfMonthClaimed,Sex,MaritalStatus,Age,Fault,PolicyType,VehicleCategory,VehiclePrice,FraudFound_P,PolicyNumber,Deductible,Days_Policy_Accident,Days_Policy_Claim,PastNumberOfClaims,AgeOfVehicle,AgeOfPolicyHolder,PoliceReportFiled,WitnessPresent,AgentType,NumberOfSuppliments,AddressChange_Claim,NumberOfCars,BasePolicy
+5,6,1,6,1,0,2,21,0,5,1,5,0,1,300,3,2,3,1,3,0,0,0,3,0,2,2
+5,17,0,1,1,1,2,24,0,1,0,0,1,15418,400,3,2,2,3,3,0,0,0,0,3,0,1
+1,17,1,5,2,0,1,34,1,0,0,0,0,15419,400,3,2,3,0,4,0,0,0,2,3,0,0
+3,13,1,6,2,1,2,27,0,1,0,0,1,15406,400,3,2,3,4,4,0,0,0,1,3,0,1
+1,13,1,2,2,1,1,27,0,2,1,0,0,15395,400,3,2,1,4,4,0,0,0,2,3,0,2
+5,17,0,1,1,1,2,24,0,1,0,0,1,15418,400,3,2,2,3,3,0,0,0,0,3,0,1
+1,9,1,7,1,0,1,31,0,1,0,0,0,15391,400,3,2,0,4,4,0,0,0,3,3,0,1
+2,13,1,2,3,1,1,41,1,0,0,4,1,15301,500,3,2,3,5,5,0,0,0,3,1,0,0
+2,13,1,2,3,1,2,30,1,1,0,0,0,15404,400,3,2,0,4,4,0,0,0,0,3,0,1
+3,13,1,6,2,1,2,27,0,1,0,0,1,15406,400,3,2,3,4,4,0,0,0,1,3,0,1
+2,17,1,5,3,1,2,21,0,1,0,0,1,15420,400,3,2,3,3,3,0,0,0,0,3,0,1
